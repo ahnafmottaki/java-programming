@@ -1,6 +1,6 @@
 public class IfElse {
 
-  public static void main(String arg[]) {
+  public static void main(String[] args) {
     boolean isRaining = true;
     if (isRaining) {
       System.out.println(

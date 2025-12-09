@@ -5,7 +5,7 @@ public class MathClass {
     return randomNumber;
   }
 
-  public static void main(String arg[]) {
+  public static void main(String[] arg) {
     System.out.println("learning math class");
     // getting the maximum value
     System.out.println(Math.max(23, 45));
