@@ -2,6 +2,13 @@ import java.io.IOException;
 
 public class OverloadedMethod {
 
+  static void recursiveShow(int x) {
+    if (x > 0) {
+      System.out.printf("Number: %d", x);
+      recursiveShow(x - 1);
+    }
+  }
+
   static float getArea(int length, int breadth) {
     float area = length * breadth;
     return area;
@@ -67,5 +74,6 @@ public class OverloadedMethod {
     // show(4, new int[] { 34, 32 }); // show(null);
     System.out.println(findMaximum(453, 23, 232, (byte) 32));
     System.out.println(sumOfElements(453, 23, 232, (byte) 32));
+    recursiveShow(56);
   }
 }
