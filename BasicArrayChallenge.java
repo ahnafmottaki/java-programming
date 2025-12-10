@@ -101,5 +101,30 @@ public class BasicArrayChallenge {
         MyArray.printIt(myArr.leftShift());
         MyArray.printIt(myArr.insert(99, 1).arr);
         MyArray.printIt(myArr.delete(0).arr);
+
+        System.out.println("Two dimensional array");
+        // int[][] B = new int[3][4];
+        // int[][]B = {{1, 2, 3, 4}, {2. 4, 6, 8}, {4, 6, 8 , 10}};
+//        int[][] B; // this is a reference of two-dimensional array
+//        B = new int[3][4]; // here we are initializing it
+//        for(int row = 0; row < B.length; ++row) {
+//            for(int col = 0; col < B[row].length; ++col) {
+//                System.out.println(B[row][col]);
+//            }
+//        }
+//
+//        for(int[] x : B) {
+//            for (var y: x) {
+//                System.out.println(y);
+//            }
+//        }
+
+//        creating jagged array
+        int X[][];
+        X = new int[3][];
+        X[0] = new int[2];
+        X[1] = new int[4];
+        X[2] = new int[3];
     }
+
 }
