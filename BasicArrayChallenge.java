@@ -6,6 +6,37 @@ class MyArray {
         this.arr = arr;
     }
 
+    public MyArray delete(int pos) {
+        int[] B = new int[arr.length - 1];
+        for(int i = 0; i < arr.length; ++i) {
+            if(i < pos) {
+                B[i] = arr[i];
+            } else if( i == pos) {
+                continue;
+            } else {
+                B[i - 1] = arr[i];
+            }
+
+        }
+        arr = B;
+        return this;
+    }
+
+    public MyArray insert(int x, int pos){
+         int B[] = new int[arr.length + 1];
+         for(int i = 0; i < B.length; ++i) {
+             if(i < pos) {
+                 B[i] = arr[i];
+             }else if(i == pos) {
+                 B[i] = x;
+             }  else {
+                 B[i] = arr[i - 1];
+             }
+         }
+         arr = B;
+        return this;
+    }
+
     public int[] rightShift() {
         int[] B = new int[arr.length];
         for(int i = 0; i < arr.length; ++i) {
@@ -68,5 +99,7 @@ public class BasicArrayChallenge {
         MyArray myArr = new MyArray(A);
         MyArray.printIt(myArr.rightShift());
         MyArray.printIt(myArr.leftShift());
+        MyArray.printIt(myArr.insert(99, 1).arr);
+        MyArray.printIt(myArr.delete(0).arr);
     }
 }
