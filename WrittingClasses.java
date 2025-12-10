@@ -7,6 +7,17 @@ public class WrittingClasses {
     c1.radius = 45;
     System.out.println(c1.area());
     System.out.println(c1.permteter());
+    Rectangle r1 = new Rectangle(10, 15);
+    System.out.println(r1.area());
+
+    // creating array of objects
+    Rectangle[] rectangles = new Rectangle[3];
+    for (int i = 0; i < rectangles.length; ++i) {
+      rectangles[i] = new Rectangle(13 * (i + 1), 22 * (i + 1));
+    }
+    for (var rect : rectangles) {
+      System.out.println(rect);
+    }
   }
 }
 
@@ -25,8 +36,36 @@ class Circle {
 
 class Rectangle {
 
-  public int length;
-  public int breadth;
+  private int length;
+  private int breadth;
+
+  public Rectangle() {
+    System.out.println("non-parameterized constructor is called");
+    length = 1;
+    breadth = 1;
+  }
+
+  public Rectangle(int s) {
+    System.out.println("Single parameter constructor is called");
+    length = breadth = s;
+  }
+
+  public Rectangle(int length, int breadth) {
+    this.length = length;
+    this.breadth = breadth;
+  }
+
+  public int getLength() {
+    return length;
+  }
+
+  public void setLength(int length) {
+    if (length > 0) {
+      this.length = length;
+    } else {
+      this.length = 0;
+    }
+  }
 
   public int area() {
     return length * breadth;
@@ -38,6 +77,10 @@ class Rectangle {
 
   public boolean isSquare() {
     return length == breadth;
+  }
+
+  public String toString() {
+    return "length is: " + length + " , breadth is: " + breadth;
   }
 }
 
