@@ -1,3 +1,5 @@
+import java.lang.reflect.Method;
+
 public class MatrixMultiplication {
 
   public static int[][] multiply(int[][] A, int[][] B) {
@@ -15,6 +17,10 @@ public class MatrixMultiplication {
       }
     }
     return C;
+  }
+
+  public static void change(String x) {
+    x = "ahnaf";
   }
 
   public static void main(String[] args) {
