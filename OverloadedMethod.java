@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class OverloadedMethod {
 
   static float getArea(int length, int breadth) {
@@ -28,6 +30,29 @@ public class OverloadedMethod {
     return reversed;
   }
 
+  static int findMaximum(int... arr) {
+    int max = arr[0];
+    for (var x : arr) {
+      if (x > max) {
+        max = x;
+      }
+    }
+    return max;
+  }
+
+  static int sumOfElements(int... X) {
+    int sum = 0;
+    for (var x : X) {
+      sum += x;
+    }
+    return sum;
+  }
+
+  //  variable arguments
+  static void show(int... x) {
+    System.out.println(x.length);
+  }
+
   public static void main(String[] args) {
     System.out.println(reverse(56));
     int[] X = { 3, 43, 2 };
@@ -36,5 +61,11 @@ public class OverloadedMethod {
       System.out.printf("%d ,", x);
     }
     System.out.println("]");
+    show(10);
+    int[] Z = { 534, 32, 32, 3 };
+    show(34, 45);
+    // show(4, new int[] { 34, 32 }); // show(null);
+    System.out.println(findMaximum(453, 23, 232, (byte) 32));
+    System.out.println(sumOfElements(453, 23, 232, (byte) 32));
   }
 }
