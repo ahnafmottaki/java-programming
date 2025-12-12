@@ -23,7 +23,34 @@ public class Student {
   private static String[] generateRegistrationAndRoll() {
     String roll = "Math-" + serialCount;
     String rString = ("my-student-" + serialCount++);
-    String[] registrationAndRoll = { rString, roll };
-    return registrationAndRoll;
+    return new String[] { rString, roll };
+  }
+
+  public static void helloWorld() {
+    System.out.println("Hello World");
+  }
+
+  protected static void protectedMethod() {
+    System.out.println("this is a protected method");
+  }
+
+  static void defaultMethod() {
+    System.out.println("this is a default method");
+  }
+
+  protected class MyInnerProtectedClass {
+
+    public MyInnerProtectedClass() {
+      System.out.println("this is my inner protected");
+    }
+  }
+
+  class MyInnerPackagePrivateClass {
+
+    public MyInnerPackagePrivateClass() {
+      System.out.println("this is inner package private");
+    }
   }
 }
+
+class Mytest {}
