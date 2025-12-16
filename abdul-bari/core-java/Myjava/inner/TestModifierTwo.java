@@ -15,7 +15,6 @@ public class TestModifierTwo {
   }
 }
 
-
 class MyInnerStudentPack extends Student {
 
   class MyInnerProtectedClass {
